@@ -69,11 +69,11 @@ Use `:if` and `:unless` options with a symbol corresponding to the conditional m
 ## Use examples
 
   - Destroy an image file after a record is destroyed:
-    `after_commit :delete_picture_file_from_disk, on: [:destroy]`
+    - `after_commit :delete_picture_file_from_disk, on: [:destroy]`
   - Generate a User's session token, if none already exists, before validation:
-    `before_validation :ensure_session_token`
-  - Logging and testing
-    `after_commit :log_user_saved_to_db, on: [:create, :update]`
+    - `before_validation :ensure_session_token`
+  - Logging transactions or other lifecycle events
+    - `after_commit :log_user_saved_to_db, on: [:create, :update]`
   
 ## TODO
 Outline more examples of when to use callbacks.
